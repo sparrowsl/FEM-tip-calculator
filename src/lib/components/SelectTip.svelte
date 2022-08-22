@@ -1,15 +1,32 @@
 <script>
+  import { clickedValue } from '../store.js';
+  let clicked = false;
+
+  const tipValues = [5, 10, 15, 25, 50];
+
+  $: if ($clickedValue) console.log($clickedValue);
 </script>
 
 <div>
-  <h3 class="capitalize">Select Tip %</h3>
+  <h3 class="text-grayish_cyan mb-2 text-sm font-bold capitalize">
+    Select Tip %
+  </h3>
 
-  <ul class="grid grid-cols-2">
-    <li>5%</li>
-    <li>10%</li>
-    <li>15%</li>
-    <li>25%</li>
-    <li>50%</li>
-    <li>Custom</li>
+  <ul class="grid grid-cols-2 gap-3">
+    {#each tipValues as tip}
+      <li
+        on:click={() => ($clickedValue = tip)}
+        class="{$clickedValue === tip
+          ? 'bg-strong_cyan text-very_dark_cyan'
+          : 'bg-very_dark_cyan text-white'} cursor-pointer rounded-md p-2 text-center text-base font-bold"
+      >
+        {tip}%
+      </li>
+    {/each}
+    <li
+      class="bg-very_light_grayish_cyan text-very_dark_cyan rounded-md p-2 text-center text-base font-bold"
+    >
+      Custom
+    </li>
   </ul>
 </div>
