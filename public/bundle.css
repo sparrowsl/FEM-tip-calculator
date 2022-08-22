@@ -748,3 +748,35 @@ video {
   --tw-text-opacity: 1;
   color: hsl(172 67% 45% / var(--tw-text-opacity));
 }
+
+@media (min-width: 768px) {
+  .md\:grid {
+    display: grid;
+  }
+
+  .md\:min-h-fit {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+
+  .md\:min-h-screen {
+    min-height: 100vh;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:place-content-center {
+    place-content: center;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
+  .md\:rounded-3xl {
+    border-radius: 1.5rem;
+  }
+}

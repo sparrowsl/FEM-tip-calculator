@@ -1,10 +1,7 @@
 <script>
   import { clickedValue } from '../store.js';
-  let clicked = false;
 
   const tipValues = [5, 10, 15, 25, 50];
-
-  $: if ($clickedValue) console.log($clickedValue);
 </script>
 
 <div>
