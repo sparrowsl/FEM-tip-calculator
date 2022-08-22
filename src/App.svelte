@@ -6,19 +6,19 @@
 </script>
 
 <div class="md:grid md:min-h-screen md:place-content-center">
-  <header class="grid min-h-[10vh] place-content-center">
+  <header class="mb-3 grid min-h-[10vh] place-content-center">
     <h1
-      class="font-space_mono text-very_dark_cyan text-center font-bold uppercase"
+      class="font-space_mono text-very_dark_cyan text-center font-bold uppercase md:text-xl"
     >
       Spli<br />tter
     </h1>
   </header>
 
   <main
-    class="font-space_mono flex min-h-[90vh] flex-col justify-evenly rounded-t-3xl
-    bg-white p-6 md:min-h-fit md:flex-row md:gap-4 md:rounded-3xl"
+    class="font-space_mono flex min-h-[90vh] flex-col justify-evenly rounded-t-3xl bg-white p-6
+    md:min-h-fit md:min-w-[600px] md:flex-row md:justify-around md:gap-4 md:rounded-3xl"
   >
-    <span>
+    <span class="lg:flex lg:flex-col lg:gap-6">
       <Bill />
       <SelectTip />
       <NumberOfPeople />

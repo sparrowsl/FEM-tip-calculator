@@ -1,5 +1,5 @@
 <script>
-  import { clickedValue } from '../store.js';
+  import { selectedTip } from '../store.js';
 
   const tipValues = [5, 10, 15, 25, 50];
 </script>
@@ -9,11 +9,11 @@
     Select Tip %
   </h3>
 
-  <ul class="grid grid-cols-2 gap-3">
+  <ul class="grid grid-cols-2 gap-3 md:grid-cols-3">
     {#each tipValues as tip}
       <li
-        on:click={() => ($clickedValue = tip)}
-        class="{$clickedValue === tip
+        on:click={() => ($selectedTip = tip)}
+        class="{$selectedTip === tip
           ? 'bg-strong_cyan text-very_dark_cyan'
           : 'bg-very_dark_cyan text-white'} cursor-pointer rounded-md p-2 text-center text-base font-bold"
       >
