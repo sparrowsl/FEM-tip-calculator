@@ -8,7 +8,8 @@
       Number of People
     </label>
     <input
-      type="text"
+      type="number"
+      min="1"
       bind:value={$numberOfPeople}
       class="bg-very_light_grayish_cyan w-full rounded-sm px-4 py-2 text-right font-bold"
     />

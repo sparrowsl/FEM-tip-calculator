@@ -1,5 +1,19 @@
 <script>
-  import { tipAmount, totalPerPerson } from '../store.js';
+  import {
+    tipAmount,
+    totalPerPerson,
+    selectedTip,
+    numberOfPeople,
+    totalBill,
+  } from '../store.js';
+
+  // const calculateTip = () => {
+  $: {
+    $tipAmount = Number(
+      (($totalBill * ($selectedTip / 100)) / $numberOfPeople).toFixed(2),
+    );
+  }
+  // };
 </script>
 
 <section
@@ -11,7 +25,9 @@
       <span class="text-grayish_cyan text-xs">/ person</span>
     </p>
     <!-- amount of tip per person -->
-    <span class="text-strong_cyan text-2xl font-bold">%{$tipAmount}</span>
+    <span class="text-strong_cyan text-2xl font-bold">
+      ${$tipAmount !== Infinity ? $tipAmount : '0.00'}
+    </span>
   </div>
 
   <div class="flex items-center justify-between">
@@ -20,7 +36,7 @@
       <span class="text-grayish_cyan text-xs">/ person</span>
     </p>
     <!-- amount of total bill for all person -->
-    <span class="text-strong_cyan text-2xl font-bold">%{$totalPerPerson}</span>
+    <span class="text-strong_cyan text-2xl font-bold">${$totalPerPerson}</span>
   </div>
 
   <!-- reset button -->
