@@ -15,11 +15,8 @@
     $selectedTip = 0;
   };
 
-  let newTip = $selectedTip;
-  $: console.log($selectedTip);
-
   $: $tipAmount = Number(
-    (($totalBill * (newTip / 100)) / $numberOfPeople).toFixed(2),
+    (($totalBill * ($selectedTip / 100)) / $numberOfPeople).toFixed(2),
   );
 
   $: $totalPerPerson = Number(($totalBill / $numberOfPeople).toFixed(2));
@@ -56,8 +53,8 @@
   <button
     disabled={$tipAmount && $totalPerPerson ? false : true}
     class="text-very_dark_cyan bg-strong_cyan disabled:text-light_grayish_cyan
-    disabled:bg-dark_grayish_cyan mt-auto block w-full rounded-md p-2 text-lg
-    font-bold capitalize disabled:cursor-not-allowed"
+    disabled:bg-dark_grayish_cyan hover:bg-light_grayish_cyan mt-auto block w-full rounded-md p-2
+    text-lg font-bold uppercase disabled:cursor-not-allowed"
     on:click={resetValues}
   >
     reset

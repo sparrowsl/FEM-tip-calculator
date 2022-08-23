@@ -1,8 +1,7 @@
 import { writable } from 'svelte/store';
 
-export let selectedTip = writable(15); // in %
-export let totalBill = writable(142.55);
-export let tipAmount = writable(4.27);
-// export let customTip = writable(0);
-export let totalPerPerson = writable(32.79);
-export let numberOfPeople = writable(5);
+export let selectedTip = writable(0); // in %
+export let totalBill = writable(0);
+export let tipAmount = writable(0);
+export let totalPerPerson = writable(0);
+export let numberOfPeople = writable(1);

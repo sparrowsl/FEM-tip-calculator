@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "compile": "npx tailwindcss -i ./app.css -o ./public/bundle.css -w"
+    "compile": "npx tailwindcss -i ./app.css -o ./public/bundle.css -w -m"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.1",

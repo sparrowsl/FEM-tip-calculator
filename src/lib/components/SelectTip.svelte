@@ -1,11 +1,7 @@
 <script>
   import { selectedTip } from '../store.js';
 
-  let isNumber;
   const tipValues = [5, 10, 15, 25, 50];
-
-  $: if (isNumber) $selectedTip = isNumber;
-  $: console.log(isNumber);
 </script>
 
 <div>
@@ -17,7 +13,7 @@
     {#each tipValues as tip}
       <li
         on:click={() => ($selectedTip = tip)}
-        class="{$selectedTip === tip && !isNumber
+        class="{$selectedTip === tip
           ? 'bg-strong_cyan text-very_dark_cyan'
           : 'bg-very_dark_cyan text-white'} cursor-pointer rounded-md p-2 text-center text-base font-bold"
       >
@@ -25,10 +21,11 @@
       </li>
     {/each}
     <input
-      type="number"
+      type="text"
       placeholder="Custom"
-      bind:value={isNumber}
-      class="bg-very_light_grayish_cyan text-very_dark_cyan rounded-md p-2 text-right text-base font-bold"
+      disabled
+      class="bg-very_light_grayish_cyan text-very_dark_cyan rounded-md
+      p-2 text-right text-base font-bold disabled:cursor-not-allowed"
     />
   </ul>
 </div>
