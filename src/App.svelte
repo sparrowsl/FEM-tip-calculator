@@ -16,7 +16,7 @@
 
   <main
     class="font-space_mono flex min-h-[90vh] flex-col justify-evenly rounded-t-3xl bg-white p-6
-    md:min-h-fit md:min-w-[600px] md:flex-row md:justify-around md:gap-4 md:rounded-3xl"
+    md:min-h-fit md:w-[600px] md:flex-row md:justify-around md:gap-4 md:rounded-3xl"
   >
     <span class="md:flex md:flex-col md:gap-6">
       <Bill />

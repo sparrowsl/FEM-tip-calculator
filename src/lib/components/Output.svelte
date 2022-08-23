@@ -15,14 +15,14 @@
     $selectedTip = 0;
   };
 
-  $: {
-    $tipAmount = Number(
-      (($totalBill * ($selectedTip / 100)) / $numberOfPeople).toFixed(2),
-    );
-  }
-  $: {
-    $totalPerPerson = Number(($totalBill / $numberOfPeople).toFixed(2));
-  }
+  let newTip = $selectedTip;
+  $: console.log($selectedTip);
+
+  $: $tipAmount = Number(
+    (($totalBill * (newTip / 100)) / $numberOfPeople).toFixed(2),
+  );
+
+  $: $totalPerPerson = Number(($totalBill / $numberOfPeople).toFixed(2));
 </script>
 
 <section
