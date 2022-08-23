@@ -1,4 +1,4 @@
-# Frontend Mentor - Tip calculator app solution
+# Frontend Mentor - Tip calculator
 
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX).
 
@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/benjithorpe/FEM-tip-calculator)
+- Live Site URL: [Live site URL](https://fem-tip-calculat0r.netlify.app/)
 
 ## My process
 
